@@ -1,0 +1,194 @@
+﻿@charset "utf-8";
+/*通配符，设置所有标签的外边距、内边距、边框为0*/
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+body {
+	background-color: #559664;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color: #474747;
+	text-align: center;/*实现IE6以下版本居中效果*/
+}  
+#box {/*设置最大的盒子高和宽*/
+	width: 1024px;
+	margin: 0 auto;
+	background-color: #FFF; /*设定box div背景为白色*/
+	text-align: left;
+}
+#banner {
+	height: 209px;
+}
+#menu {
+	height: 50px;
+	background-color:#328048;
+}
+#menu ul {  /*设置banner盒子里的无序列表样式*/
+	list-style: none;   /*取消列表项目*/
+	float: right;    /*向右浮动*/
+	line-height: 50px; /*设置行高50像素，实现单行垂直居中*/
+	margin-right: 10px;
+	width:430px;
+	height:50px;
+}
+#menu ul li {
+	float: left;       /*向左浮动*/
+	margin-left: 20px;  /*距离左边20像素*/
+}
+#menu ul li a {  /*设置超链接的样式*/
+	text-decoration: none;  /*取消下划线*/
+	font-size: 16px;        /*字体大小*/
+	color: #fff;
+	font-family: "微软雅黑";
+}
+/*设置鼠标经过的超链接状态的样式*/
+#menu ul li a:hover {
+	color: #F60;
+}
+#main{
+	padding-top:10px;  /*距离上边内边距10像素*/
+}
+#left { /*设置左侧列表div的样式*/
+	width: 250px;
+	float: left;
+}
+/*包含照片的div样式*/
+#zuozhe {
+	text-align: center;		   /*设置盒子内容居中*/
+	padding-top: 15px;         /*距离上边内边距15像素*/
+	padding-left: 15px;        /*距离左边内边距15像素*/
+}
+/*设置照片的样式*/	
+#zuozhe img {
+	border: 1px solid #096;  /*设置照片的边框 1像素宽，实线 绿色*/
+	padding: 8px;     		   /*所有边的内边距8像素*/
+	-moz-border-radius:8px;    /*火狐浏览器*/
+	-ms-border-radius:8px;     /*IE浏览器*/
+	-o-border-radius:8px;       /*欧朋（opera）浏览器*/
+	-webkit-border-radius:8px;  /*谷歌chrome浏览器*/
+	border-radius:8px;
+	*position:relative;           /*  *表示为IE7的hack*/ 
+	*z-index:2;                 /*设置该盒子的z-index 比其他盒子要高*/ 
+	*background-color:#FFF;     /*为IE兼容圆角框，实现背景颜色为白色*/ 
+	*behavior: url(ie-css3.htc);   /* 通过behavior导入ie-css3.htc文件 */
+
+}
+
+/*设置段落文本*/
+#zuozhe span {
+	display:block;           /*把行内元素转换为块级元素*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	margin:10px;                        /*四边外边距为10px*/
+	padding-top:5px;                    /*上边内边距为5px*/
+	padding-bottom:5px;        			 /*下边内边距为5px */
+	border-top: 1px dashed #666666;      /*上边边框宽度为1px，横虚线，灰色*/
+	border-bottom: 1px dashed #666666;   /*下边边框*/
+}
+#huoli {/*控制活力地带div样式*/
+	height: 150px;     /*必须设置，否则造成布局错乱*/
+	margin-top: 20px; /*距离上边外边距为20像素*/
+}
+.biaoti {/*控制活力地带里标题h5的样式*/
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bolder;
+	width: 220px;
+	height: 40px;
+	padding-left: 30px;/*内左边距*/
+	line-height: 40px;/*设置h5的行高与高度一致*/
+	background-color:#328048;/*设置背景*/
+	-moz-border-radius:0px 10px 10px 0px;    /*火狐浏览器*/
+	-ms-border-radius:0px 10px 10px 0px;     /*IE浏览器*/
+	-o-border-radius:0px 10px 10px 0px;       /*欧朋（opera）浏览器*/
+	-webkit-border-radius:0px 10px 10px 0px;  /*谷歌chrome浏览器*/
+	border-radius: 0px 10px 10px 0px;
+}
+#huoli ul {/*控制活力地带ul的样式*/
+	padding-left: 20px;  /*内左边距*/
+	padding-top: 10px;   /*内上边距*/
+}
+#huoli li {/*控制列表的样式*/
+	float: left;  /*向左浮动*/
+	list-style: none;  /*取消项目列表的符号*/
+	margin-left: 10px;  /*外左边距*/
+	width: 80px;   /*每个li的宽度为80px*/
+	margin:5px;
+}
+#huoli li img{
+	float:left;
+	margin-right:6px;
+	}
+#huoli li a{/*控制超链接的样式*/
+	font-size: 12px;  /*字体大小*/
+	color: #333;      /*字体颜色*/
+	text-decoration: none;  /*取消字体下划线*/
+	float:left;
+}
+/*控制鼠标经过状态的字体颜色*/
+#huoli li a:hover, #list li a:hover {
+	color: #F00;
+}
+#list ul {/*控制无序列表的样式*/
+	list-style: none;  /*取消项目列表的符号*/
+	padding:15px;
+}
+#list ul li {/*控制无序列表li的样式*/
+	/*
+	background-image:url(images/icon1.gif); 
+	background-repeat:no-repeat;   
+	background-position:5px center;  /*设置背景图片的位置*/
+	background: url(images/icon1.gif) no-repeat 5px center;
+	border-bottom: 1px dashed #666666; /*添加下边框*/
+	padding-bottom: 8px;  /*内下边距*/
+	padding-left: 15px;    /*内左边距*/
+	margin-bottom:8px;     /*外左边距*/
+}
+#list li a {/*控制超链接的样式*/
+	font-size: 12px;  /*字体大小*/
+	color: #333;      /*字体颜色*/
+	text-decoration: none;  /*取消字体下划线*/
+}
+#right {
+	width: 744px;       /*设置宽度为744px，左边预留30px空白*/
+	float: right;
+}
+.wenzhang{
+	padding:0 30px;
+}
+.wenzhang h3 { /*设置文章标题样式*/ 
+	font-size: 18px;       /*字体大小*/ 
+	border-bottom: 1px dashed #666666;  /*只显示下边框样式*/ 
+	padding-bottom: 8px;   /*设置下边距*/ 
+	margin:10px;
+}
+.wenzhang h3 a {
+	color:#F60;
+	text-decoration: none;  /*清除超链接默认的下划线*/ 
+}
+.wenzhang h3 a:hover {
+	color:#328048;
+}
+.wenzhang span {  /*显示作者信息的文本样式，在段落右边显示*/ 
+	font-size: 12px;
+	color: #666;         /*字体颜色，单独设置，与主体文本颜色不一样，要单独设置覆盖*/ 
+	margin-left:520px;   /*设置一个比较大左外边距，使文本在右边显示*/ 
+}
+.wenzhang p {
+	line-height:35px;
+	text-indent:2em;
+}
+p.zhu{font-size:10px; color:#999;}
+#footer {
+	height: 80px;
+	background-color: #328048;
+	clear: both;       /*清除浮动，不受浮动影响*/
+}
+#footer span{
+	display:block;          /*转换块级元素*/
+	text-align:center;     /*水平居中*/
+	line-height:80px;      /*实现垂直居中*/
+	color: #FFF;
+}
